@@ -1,0 +1,266 @@
+/* Tab Navigation */
+.tab-content {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+/* Report Sections */
+.hpsr-report-section {
+    margin-bottom: 30px;
+}
+
+.hpsr-report-section h3 {
+    padding: 8px 12px;
+    margin: 0 0 8px;
+    font-size: 14px;
+    background: #f8f8f8;
+    border: 1px solid #e5e5e5;
+}
+
+/* Form Elements */
+.hpsr-search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.hpsr-search-form input[type="text"] {
+    flex-grow: 1;
+    max-width: 400px;
+}
+
+/* Debug Logs */
+#hpsr-logs {
+    width: 100%;
+    height: 400px;
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    overflow: auto;
+    white-space: pre-wrap;
+}
+
+/* User Details */
+.hpsr-user-details h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background: #f8f8f8;
+    border: 1px solid #e5e5e5;
+}
+
+.hpsr-user-details table {
+    margin-bottom: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.hpsr-user-details table th {
+    text-align: left;
+    width: 200px;
+}
+
+.hpsr-user-details .hpsr-user-actions {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.hpsr-debug-info {
+    margin-top: 30px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    background: #f9f9f9;
+}
+
+.hpsr-debug-info pre {
+    margin: 0;
+    max-height: 500px;
+    overflow: auto;
+}
+
+/* Status Colors - Standardized */
+.subscription-status,
+.listing-status {
+    font-weight: bold;
+}
+
+.subscription-status.active {
+    color: #46b450;
+}
+
+.subscription-status.inactive,
+.subscription-status.cancelled,
+.subscription-status.expired {
+    color: #dc3232;
+}
+
+.subscription-status.pending-cancel,
+.subscription-status.on-hold {
+    color: #ffba00;
+}
+
+.listing-status.published {
+    color: #46b450;
+}
+
+.listing-status.draft {
+    color: #ffba00;
+}
+
+.listing-status.pending {
+    color: #00a0d2;
+}
+
+.listing-status.private {
+    color: #827d7d;
+}
+
+/* Dashboard Widget */
+.hpsr-dashboard-widget {
+    padding: 10px;
+    margin: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.hpsr-dashboard-widget h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #23282d;
+    margin: 0 0 15px 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hpsr-dashboard-widget .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.hpsr-dashboard-widget .stat-tile {
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    padding: 15px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.hpsr-dashboard-widget .stat-tile .label {
+    color: #666;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.hpsr-dashboard-widget .stat-tile .value {
+    font-size: 24px !important;
+    font-weight: bold !important;
+    color: #0073aa !important;
+}
+
+.hpsr-dashboard-widget .sync-info {
+    font-size: 13px;
+    color: #23282d;
+    margin-bottom: 10px;
+}
+
+.hpsr-dashboard-widget .button {
+    background-color: #0073aa;
+    color: #fff;
+    border-color: #006799;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 13px;
+}
+
+.hpsr-dashboard-widget .button:hover {
+    background-color: #006799;
+    border-color: #005d87;
+    color: #fff;
+}
+
+/* Notices */
+.hpsr-notice {
+    position: relative;
+}
+
+/* Loading Indicator */
+.hpsr-loading {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+.hpsr-loading:after {
+    content: "...";
+    animation: dots 1.5s steps(5, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% {
+        content: ".";
+    }
+    40% {
+        content: "..";
+    }
+    60% {
+        content: "...";
+    }
+    80%, 100% {
+        content: "";
+    }
+}
+
+/* Admin Menu Icon */
+#adminmenu li.toplevel_page_subscription-renewals .wp-menu-image img {
+    padding: 0;
+    opacity: 1;
+}
+
+#adminmenu li.toplevel_page_subscription-renewals div.wp-menu-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Make tables responsive */
+@media screen and (max-width: 782px) {
+    .hpsr-search-form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .hpsr-search-form input[type="text"] {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .form-table td {
+        padding: 15px 10px;
+    }
+    
+    #hpsr-logs {
+        height: 300px;
+    }
+    
+    .hpsr-dashboard-widget .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
